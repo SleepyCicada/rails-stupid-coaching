@@ -2,11 +2,11 @@ class QuestionsController < ApplicationController
  def ask
  end
 
-def answer
+  def answer
     input = params[:input]
 
-    if input.nil?
-      @response = "Please enter something for the coach to respond to."
+    if input.blank?
+      @response = "Ask and you will be answered by coach."
     else
       @response =
         if input.include?("?")
